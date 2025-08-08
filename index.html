@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedAnna - AI Medical Simulation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1"
+  }
+}
+</script>
+<script>
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* For typewriter effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: currentColor; }
+  }
+
+  /* For Preloader emphasis */
+  @keyframes fadeInEmphasis {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeInEmphasis {
+    animation: fadeInEmphasis 0.7s ease-out forwards;
+  }
+
+  /* For continuous pulse in Header */
+  .animate-pulse-beat-continuous {
+    animation: pulse-beat 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse-beat {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+  }
+
+  /* For preloader heartbeat line */
+  @keyframes draw-line {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .animate-draw-line {
+    stroke-dasharray: 310; 
+    stroke-dashoffset: 310;
+    animation: draw-line 1s ease-out forwards;
+  }
+
+  /* For scroll-triggered animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fadeInUp {
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  /* For video blending */
+  .video-mask {
+    -webkit-mask-image: radial-gradient(ellipse 80% 90% at 50% 50%, black 60%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 90% at 50% 50%, black 60%, transparent 100%);
+  }
+  .video-glow {
+    filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.35));
+  }
+
+  /* Custom Cursor */
+  @media (hover: hover) {
+    body, a, button {
+      cursor: none;
+    }
+  }
+
+  .custom-cursor-dot,
+  .custom-cursor-outline {
+    position: fixed;
+    top: -50px; /* Start off-screen */
+    left: -50px;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    will-change: top, left;
+    mix-blend-mode: difference;
+  }
+  
+  .custom-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+  }
+  
+  .custom-cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
+  }
+
+  .cursor-interact {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-width: 1px;
+  }
+
+  .cursor-hidden {
+    opacity: 0;
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
