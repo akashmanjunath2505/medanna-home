@@ -102,6 +102,16 @@
     filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.35));
   }
 
+  /* For seamless video loop */
+  @keyframes loop-fade {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  .animate-loop-fade {
+    animation: loop-fade 0.4s ease-in-out;
+  }
+
   /* Custom Cursor */
   @media (hover: hover) {
     body, a, button {

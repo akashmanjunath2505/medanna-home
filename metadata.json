@@ -1,6 +1,8 @@
 {
   "name": "MedAnna - AI Medical Simulation",
   "description": "An AI-powered platform for medical students and professionals to practice diagnostic skills through real-world case simulations, enhancing their clinical reasoning and decision-making.",
-  "requestFramePermissions": [],
+  "requestFramePermissions": [
+    "microphone"
+  ],
   "prompt": ""
 }
