@@ -49,7 +49,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onAnimationComplete }) => 
       aria-label="Loading animation" role="status"
     >
       <div className="w-full max-w-4xl px-4 text-center">
-        <h1 className="font-mono text-3xl md:text-5xl text-blue-400 min-h-[8rem] flex flex-col justify-center">
+        <h1 className="font-mono text-2xl sm:text-3xl md:text-5xl text-blue-400 min-h-[6rem] sm:min-h-[8rem] flex flex-col justify-center">
           {typingStarted && (
              <div
               className="inline-block overflow-hidden whitespace-nowrap border-r-4"
@@ -67,7 +67,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onAnimationComplete }) => 
             {headlinePart2}
           </div>
         </h1>
-        <p className={`mt-4 font-sans text-xl text-slate-400 transition-opacity duration-1000 ${showSubtitle ? 'opacity-100' : 'opacity-0'}`}>
+        <p className={`mt-4 font-sans text-lg md:text-xl text-slate-400 transition-opacity duration-1000 ${showSubtitle ? 'opacity-100' : 'opacity-0'}`}>
           {subtitle}
         </p>
         <div className="mt-8 h-12 flex items-center justify-center">

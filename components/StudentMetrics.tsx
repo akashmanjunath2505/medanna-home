@@ -97,7 +97,7 @@ export const StudentMetrics: React.FC = () => {
                 {testimonials.map((quote, index) => (
                     <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentTestimonial ? 'opacity-100' : 'opacity-0'}`}>
                         <QuoteIcon className="mx-auto h-8 w-8 text-slate-400 dark:text-slate-600 mb-4"/>
-                        <p className="text-xl md:text-2xl font-medium text-slate-700 dark:text-slate-300">
+                        <p className="text-lg md:text-2xl font-medium text-slate-700 dark:text-slate-300">
                             "{quote}"
                         </p>
                         <p className="mt-4 text-sm font-semibold text-blue-600 dark:text-blue-400 tracking-wide">

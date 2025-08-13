@@ -84,7 +84,7 @@ export const HowItWorksSection = () => {
 
         <div className="mt-16 max-w-4xl mx-auto">
           <TimelineStep step={timelineSteps[0]} index={0}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               {trainingPhases.map(({ name }) => (
                 <button
                   key={name}
@@ -103,7 +103,7 @@ export const HowItWorksSection = () => {
           </TimelineStep>
 
           <TimelineStep step={timelineSteps[1]} index={1}>
-             <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+             <div className="grid grid-cols-3 gap-3">
                  {specialties.map(({ name, icon }) => (
                     <button
                         key={name}

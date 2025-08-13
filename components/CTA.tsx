@@ -7,8 +7,8 @@ export const CTA: React.FC = () => {
   return (
     <section id="start-journey" ref={ref} className="py-20 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-2xl p-12 text-center shadow-2xl transition-all duration-700 ease-out transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className={`bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-2xl p-8 md:p-12 text-center shadow-2xl transition-all duration-700 ease-out transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Ready to Enhance Your Diagnostic Skills?
           </h2>
           <p className="max-w-2xl mx-auto text-indigo-100 mb-8">

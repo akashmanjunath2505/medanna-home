@@ -75,19 +75,19 @@ export const Hero: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col space-y-2">
                 <h1
-                  className="font-sans font-extrabold tracking-tighter text-7xl sm:text-8xl md:text-9xl text-white drop-shadow-lg"
+                  className="font-sans font-extrabold tracking-tighter text-6xl sm:text-8xl md:text-9xl text-white drop-shadow-lg"
                   style={getWordStyle(0)}
                 >
                   simulate
                 </h1>
                 <h1
-                  className="font-sans font-extrabold tracking-tighter text-7xl sm:text-8xl md:text-9xl text-white drop-shadow-lg"
+                  className="font-sans font-extrabold tracking-tighter text-6xl sm:text-8xl md:text-9xl text-white drop-shadow-lg"
                   style={getWordStyle(1)}
                 >
                   diagnose
                 </h1>
                 <h1
-                  className="font-sans font-extrabold tracking-tighter text-7xl sm:text-8xl md:text-9xl text-blue-400"
+                  className="font-sans font-extrabold tracking-tighter text-6xl sm:text-8xl md:text-9xl text-blue-400"
                   style={{ ...getWordStyle(2), textShadow: '0 0 15px rgba(59, 130, 246, 0.6)' }}
                 >
                   learn
